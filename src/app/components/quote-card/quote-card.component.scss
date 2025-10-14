@@ -1,0 +1,51 @@
+.quote-card {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.quote-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.quote-author {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.quote-category {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+mat-card-actions button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+mat-card-actions button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}

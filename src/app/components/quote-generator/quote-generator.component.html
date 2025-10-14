@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Щоденне Натхнення</h1>
+  
+  <div class="quote-container" *ngIf="!isLoading; else loading">
+    <app-quote-card 
+      [quote]="currentQuote"
+      [onNewQuote]="getNewQuote.bind(this)"
+      [onShare]="shareQuote.bind(this)">
+    </app-quote-card>
+  </div>
+  
+  <ng-template #loading>
+    <div class="spinner-container">
+      <mat-spinner diameter="50"></mat-spinner>
+    </div>
+  </ng-template>
+</div>

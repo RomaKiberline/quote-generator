@@ -1,0 +1,15 @@
+<mat-card class="quote-card">
+  <mat-card-content>
+    <p class="quote-text">"{{ quote?.text }}"</p>
+    <p class="quote-author">— {{ quote?.author }}</p>
+    <span class="quote-category">{{ quote?.category }}</span>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-icon-button (click)="onNewQuote()" color="primary" aria-label="Нова цитата">
+      <mat-icon>refresh</mat-icon>
+    </button>
+    <button mat-icon-button (click)="onShare()" color="accent" aria-label="Поділитися">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
