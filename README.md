@@ -25,7 +25,6 @@ Users can generate a random quote and copy it.
 * **Angular 17+**
 * **TypeScript**
 * **HTML5 / SCSS**
-* (Optional) **Quote API** – [https://api.quotable.io/random](https://api.quotable.io/random)
 
 ---
 
