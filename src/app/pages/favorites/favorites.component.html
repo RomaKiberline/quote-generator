@@ -1,0 +1,40 @@
+<mat-card class="fav-header">
+  <mat-card-title>
+    <mat-icon color="warn">favorite</mat-icon>
+    <span>Улюблене</span>
+  </mat-card-title>
+  <mat-card-content>
+    <p>Місце для цитат, до яких хочеться повернутися. Зберігайте, перечитуйте, діліться.</p>
+  </mat-card-content>
+  <div class="actions">
+    <button mat-stroked-button color="primary" (click)="refresh()">
+      <mat-icon>refresh</mat-icon>
+      Оновити
+    </button>
+    <button mat-stroked-button color="warn" (click)="clear()">
+      <mat-icon>delete_sweep</mat-icon>
+      Очистити все
+    </button>
+  </div>
+  
+  <div *ngIf="items.length === 0" class="empty">
+    <mat-icon>bookmark_border</mat-icon>
+    <p>Поки що тут порожньо. Додайте цитати, натиснувши сердечко на головній.</p>
+  </div>
+</mat-card>
+
+<mat-card *ngIf="items.length > 0">
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let q of items; let i = index">
+        <div class="quote">
+          <div class="text">“{{ q.text }}”</div>
+          <div class="meta">— {{ q.author }} · <span class="cat">{{ q.category }}</span></div>
+        </div>
+        <button mat-icon-button color="warn" (click)="remove(i)" matListItemMeta aria-label="Видалити">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

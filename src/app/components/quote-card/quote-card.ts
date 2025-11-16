@@ -16,4 +16,5 @@ export class QuoteCard {
   @Input() quote: Quote | null = null;
   @Input() onNewQuote: () => void = () => {};
   @Input() onShare: () => void = () => {};
+  @Input() onSave: () => void = () => {};
 }

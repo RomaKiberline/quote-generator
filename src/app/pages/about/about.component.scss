@@ -1,0 +1,42 @@
+.mat-card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about {
+  margin-bottom: 16px;
+}
+
+.features {
+  margin: 8px 0 0;
+  padding: 8px 12px 8px 16px;
+  background: #f7fbff;
+  border-left: 4px solid #90caf9;
+  border-radius: 8px;
+}
+
+.note mat-card-content {
+  color: #455a64;
+}
+
+.about h3 {
+  margin: 12px 0 6px;
+  font-size: 20px;
+  color: #1976d2;
+}
+
+.features li {
+  list-style: none;
+  position: relative;
+  padding-left: 14px;
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+.features li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #1976d2;
+}

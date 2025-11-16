@@ -33,6 +33,11 @@
   margin-right: 8px;
 }
 
+.sidenav a.active {
+  background-color: #e3f2fd;
+  font-weight: 600;
+}
+
 @media (max-width: 600px) {
   .main-content {
     padding: 10px;

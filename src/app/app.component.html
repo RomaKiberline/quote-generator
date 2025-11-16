@@ -4,7 +4,7 @@
   </button>
   <span>Генератор Цитат</span>
   <span class="spacer"></span>
-  <button mat-icon-button matTooltip="Про проект">
+  <button mat-icon-button matTooltip="Про проект" routerLink="/about">
     <mat-icon>info</mat-icon>
   </button>
 </mat-toolbar>
@@ -30,3 +30,6 @@
   <mat-sidenav-content class="main-content">
     <div class="container">
       <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -4,6 +4,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { QuoteCard } from '../quote-card/quote-card';
 import { Quote, QuoteService } from '../../services/quote.service';
+import { FavoritesService } from '../../services/favorites.service';
 
 @Component({
   selector: 'app-quote-generator',
@@ -23,7 +24,8 @@ export class QuoteGenerator implements OnInit {
 
   constructor(
     private quoteService: QuoteService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private favorites: FavoritesService
   ) {}
 
   ngOnInit() {
@@ -63,5 +65,11 @@ export class QuoteGenerator implements OnInit {
         duration: 3000
       });
     });
+  }
+ 
+  saveQuote() {
+    if (!this.currentQuote) return;
+    this.favorites.addFavorite(this.currentQuote);
+    this.snackBar.open('Додано до улюблених ❤️', 'OK', { duration: 2000 });
   }
 }
